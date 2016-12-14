@@ -1,0 +1,131 @@
+body{
+	background-image: url("../Imagens/Elementos/background.gif"); 
+	background-color: #00868B; 
+	font-family: Sneak, Georgia;
+	text-align: justify;
+	font-size: 14px;
+}
+
+p{
+	text-indent: 27px;
+	line-height: 110%;
+	margin: 0;
+}
+
+ul{
+	list-style-image: url(../images/marcador.gif);
+	list-style-position: inside;
+}
+
+table, th, td{ 
+	vertical-align: middle;
+}
+
+/* Fonte arquivada */
+@font-face{
+	font-family: Sneak;
+    src: url(../fonts/Sneak-Attack.ttf);
+}
+
+/* Background do conteúdo da página */
+.fundo_da_pagina {
+	background-color: rgba(255, 255, 255, 0.7);
+	margin: 20px;
+	padding: 8px;
+	position: relative;
+}
+
+/* Background do cabeçalho */
+.fundo_menu{
+	background-color: rgba(0, 0, 0, 0.7);
+	margin-left: -8px;
+	margin-right: -8px;
+	margin-top: -8px;
+}
+
+/* Background dos creditos*/
+.fundo_creditos{
+	background-color: rgba(64, 64, 64, 0.4);
+	margin-left: -8px;
+	margin-right: -8px;
+	margin-bottom: -8px;
+}
+
+/* Tabela do cabeçalho */
+.titulo{
+	text-align: center;
+	vertical-align: middle;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+/* Título do cabeçalho */
+.titulo h1{
+	color: white;
+}
+
+/* Data */
+.data{
+	text-align: right;
+	padding-right: 8px; 
+	font-size: 10px;
+	color: white;
+}
+
+/* Créditos da página */
+#creditos{
+	padding: 10px;
+	font-size: 10px;
+	text-align: center;
+	color: white;
+}
+
+/*  Menu principal */
+.menu td{
+	margin-left: auto; 
+	margin-right: auto;
+	font-size: 14px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.menu a:link{
+	text-decoration: none;
+	color: #ADD8E6;
+}
+
+.menu a:visited{
+	text-decoration: none;
+	color: #ADD8E6;
+}
+
+.menu a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+.menu a:active{
+	text-decoration: underline;
+	color: white;
+}
+
+/* Links Gerais */
+a:link{
+	text-decoration: none;
+	color: #8B2500; 
+}
+
+a:visited{
+	text-decoration: none;
+	color: #CD3700; 
+}
+
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+a:active{
+	text-decoration: underline;
+	color: white;
+}
