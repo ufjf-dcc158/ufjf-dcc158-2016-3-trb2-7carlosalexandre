@@ -72,6 +72,13 @@ table, th, td{
 	color: white;
 }
 
+/* Texto da home */
+.home{
+	font-size: 17px;
+	text-align: center;
+}
+
+
 /* Créditos da página */
 #creditos{
 	padding: 10px;

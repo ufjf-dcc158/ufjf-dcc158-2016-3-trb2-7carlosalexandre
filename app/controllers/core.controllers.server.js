@@ -16,13 +16,39 @@ var turma = {
 }
 
 module.exports.home = function (req, res, next) {
-  res.render("index",{
+  res.render('index',{
     titulo: "Olá mundo MVC!"
   });
 }
 
+module.exports.registro = function (req, res, next) {
+  res.render('registro',{
+    titulo: "Olá mund"
+  });
+}
+
+module.exports.agendamento = function (req, res, next) {
+  res.render('agendamento',{
+    titulo: "Olá mund"
+  });
+}
+
+module.exports.resultados = function (req, res, next) {
+  res.render('resultados',{
+    titulo: "Olá mund"
+  });
+}
+
+module.exports.classificacao = function (req, res, next) {
+  res.render('classificacao',{
+    titulo: "Olá mund"
+  });;
+}
+
 module.exports.contato = function (req, res, next) {
-  res.send(detalhes);
+  res.render("index",{
+    titulo: "Olá mund"
+  });
 }
 
 module.exports.contatoHTML = function (req, res, next) {

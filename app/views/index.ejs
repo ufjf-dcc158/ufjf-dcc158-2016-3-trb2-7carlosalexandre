@@ -1,11 +1,71 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title><%=titulo%></title>
-  </head>
-  <body>
-    <h1><%=titulo%></h1>
+﻿<!DOCTYPE html>
+<html lang="pt-br">
 
-  </body>
+	<head>
+		<meta name="author" content="Carlos Alexandre">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./css/principal.css">
+		<title>Sistema de Torneio de Xadrez</title>
+	</head>
+
+	<body>
+		<div class="fundo_da_pagina">
+
+			<!-- Cabeçalho da página -->
+			<div class="fundo_menu">
+
+				<table class="titulo">
+					<tr>
+						<td>
+							<h1> Torneiro de <br/> Xadrez </h1>
+						</td>
+						<td>
+							<table class="menu">
+								<tr>
+									<td>
+										<a href="index.ejs">Home</a>
+									</td>
+									<td>
+										<a href="registro.ejs">Registro</a>
+									</td>
+									<td>
+										<a href="agendamento.ejs">Agendamento</a>
+									</td>
+									<td>
+										<a href="resultados.ejs">Resultados</a>
+									</td>
+									<td>
+										<a href="classificacao.ejs">Classificação</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+				<div class="data"> <script type="text/javascript" src="js/data.js"></script></div>
+				<hr/>
+
+			</div>
+			<!-- Fim do cabeçalho da página -->
+			<!-- Conteúdo da página -->
+			<div class="home">
+				Bem-vindo ao sistema de torneiro de xadrez! <br/>
+				Você pode fazer registros de jogadores, agendamento de partidas, entrada de resultados, acessar informações dos jogadores e consultar a classificação do torneiro.
+			</div>
+			<!-- Fim do conteúdo -->
+		</div>
+
+		<!--Créditos -->
+		<div class="fundo_creditos">
+			<div id="creditos">
+				<img src="img/ufjf.png" alt="Logo da UFJF" height="50px"/> <br/>
+				Carlos Alexandre<br/>
+				Laboratório de Programação VI
+			</div>
+
+		</div>
+
+	</body>
+
 </html>

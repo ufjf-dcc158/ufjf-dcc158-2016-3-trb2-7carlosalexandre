@@ -1,4 +1,5 @@
 var User = require('mongoose').model('User');
+
 module.exports.create = function(req, res,
  next){
    var user = new User(req.body);
@@ -37,7 +38,6 @@ module.exports.read = function(req, res, next){
   res.json(req.user);
 }
 
-
 module.exports.update = function(req, res, next){
   User.findByIdAndUpdate(
     req.user.id,
@@ -52,7 +52,6 @@ module.exports.update = function(req, res, next){
   );
 
 }
-
 
 module.exports.remove = function(req, res, next){
   User.findByIdAndRemove(
