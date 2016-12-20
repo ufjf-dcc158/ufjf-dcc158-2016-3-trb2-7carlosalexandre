@@ -5,7 +5,6 @@
 		<meta name="author" content="Carlos Alexandre">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/principal.css">
-		<script type="text/javascript" src="js/formularios.js"></script>
 		<title>Sistema de Torneio de Xadrez</title>
 	</head>
 
@@ -51,15 +50,15 @@
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
 			<div class="home">
-				<form id="formulario" name="registro" onsubmit="return registro()">
+				<form id="formulario" name="registro">
 					<fieldset>
 						<legend>Registro</legend>
 						<table>
 							<tr>
 								<th>Nome do jogador:</th>
-								<td><input type="text" name="nome" size="30" class="campos"></td>
+								<td><input type="text" name="nome" size="30" class="campos" required></td>
 								<th>Cidade do jogador:</th>
-								<td><input type="text" name="cidade" size="30" class="campos"></td>
+								<td><input type="text" name="cidade" size="30" class="campos" required></td>
 							</tr>
 						</table>
 					</fieldset>

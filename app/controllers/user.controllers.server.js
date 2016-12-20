@@ -14,16 +14,15 @@ module.exports.create = function(req, res,
 }
 
 
-module.exports.list = function(req, res, next){
-  User.find({}, function(err, users) {
+module.exports.listaJogadores = function(req, res, next){
+  Jogador.find({}, function(err, jogadores) {
     if(err){
       next(err);
     } else {
-      res.json(users);
+      res.render("lista-jogadores", {"jogadores":jogadores})
     }
   });
 }
-
 module.exports.getById = function(req, res, next, id){
   User.findOne({"_id":id}, function(err, user){
     if(err){
@@ -51,7 +50,6 @@ module.exports.update = function(req, res, next){
       }
     }
   );
-
 }
 
 module.exports.remove = function(req, res, next){

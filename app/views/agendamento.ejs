@@ -5,7 +5,6 @@
 		<meta name="author" content="Carlos Alexandre">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/principal.css">
-		<script type="text/javascript" src="js/formularios.js"></script>
 		<title>Sistema de Torneio de Xadrez</title>
 	</head>
 
@@ -51,23 +50,23 @@
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
 			<div class="home">
-				<form id="formulario" name="agendamento" onsubmit="return agendamento()">
+				<form id="formulario" name="agendamento">
 					<fieldset>
 						<legend>Agendamento</legend>
 						<table>
 							<tr>
 								<th>Nome da partida:</th>
-								<td><input type="text" name="nome" size="30" class="campos"></td>
+								<td><input type="text" name="nome" size="30" class="campos" required></td>
 								<th>Jogador 1:</th>
-								<td><select name="j1" class="campos">
-									<option value="null" selected></option>
+								<td><select name="j1" class="campos" required>
+									<option value="" selected></option>
 									<option value="AL">Alagoas</option>
 									<option value="AM">Amazonas</option>
 									</select>
 								</td>
 								<th>Jogador 2:</th>
-								<td><select name="j2" class="campos">
-									<option value="null" selected></option>
+								<td><select name="j2" class="campos" required>
+									<option value="" selected></option>
 									<option value="AL">Alagoas</option>
 									<option value="AM">Amazonas</option>
 									</select>

@@ -1,6 +1,6 @@
 body{
-	background-image: url("../Imagens/Elementos/background.gif"); 
-	background-color: #00868B; 
+	background-image: url("../Imagens/Elementos/background.gif");
+	background-color: #00868B;
 	font-family: Georgia;
 	text-align: justify;
 	font-size: 14px;
@@ -16,7 +16,7 @@ ul{
 	list-style-position: inside;
 }
 
-table, th, td{ 
+table, th, td{
 	vertical-align: middle;
 }
 
@@ -44,7 +44,7 @@ table, th, td{
 
 /* Background dos creditos*/
 .fundo_creditos{
-	position: absolute;	
+	position: absolute;
 	background-color: rgba(64, 64, 64, 0.4);
 	margin-left: -8px;
 	margin-right: -8px;
@@ -57,7 +57,7 @@ table, th, td{
 	text-align: center;
 	font-family: Sneak, Georgia;
 	vertical-align: middle;
-	margin-left: auto; 
+	margin-left: auto;
 	margin-right: auto;
 }
 
@@ -70,7 +70,7 @@ table, th, td{
 .data{
 	text-align: right;
 	font-family: Sneak, Georgia;
-	padding-right: 8px; 
+	padding-right: 8px;
 	font-size: 10px;
 	color: white;
 }
@@ -95,7 +95,7 @@ table, th, td{
 /*  Menu principal */
 .menu td{
 	font-family: Sneak, Georgia;
-	margin-left: auto; 
+	margin-left: auto;
 	margin-right: auto;
 	font-size: 14px;
 	padding-left: 20px;
@@ -125,12 +125,12 @@ table, th, td{
 /* Links Gerais */
 a:link{
 	text-decoration: none;
-	color: #8B2500; 
+	color: #8B2500;
 }
 
 a:visited{
 	text-decoration: none;
-	color: #CD3700; 
+	color: #CD3700;
 }
 
 a:hover{
@@ -153,10 +153,10 @@ a:active{
 }
 
 #formulario legend{
+	text-align: left;
 	font-size: 25px;
 }
 
 .campos{
 	font-size: 16px;
 }
-

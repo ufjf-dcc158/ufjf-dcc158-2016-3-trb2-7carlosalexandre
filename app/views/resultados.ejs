@@ -50,14 +50,14 @@
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
 			<div class="home">
-				<form id="formulario" name="resultados" onsubmit="return resultados()">
+				<form id="formulario" name="resultados">
 					<fieldset>
 						<legend>Resultados</legend>
 						<table>
 							<tr>
 								<th>Partida:</th>
-								<td><select name="partida" class="campos">
-									<option value="null" selected></option>
+								<td><select name="partida" class="campos" required>
+									<option value="" selected></option>
 									<option value="AL">Alagoas</option>
 									<option value="AM">Amazonas</option>
 									</select>
@@ -66,7 +66,7 @@
 							<tr>
 								<th>Resultado:</th>
 								<td colspan="3">
-									<input type="radio" name="resultado" value="e" id="e">Empate
+									<input type="radio" name="resultado" value="e" id="e" required>Empate
 									<input type="radio" name="resultado" value="j1" id="j1"> Venceu Jogador 1
 									<input type="radio" name="resultado" value="j2" id="j2"> Venceu Jogador 2
 								</td>
