@@ -1,4 +1,5 @@
-var User = require('mongoose').model('User');
+var Jogador = require('mongoose').model('Jogador');
+var Partida = require('mongoose').model('Partida');
 
 module.exports.create = function(req, res,
  next){

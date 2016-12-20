@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 	<head>
 		<meta name="author" content="Carlos Alexandre">
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" href="css/principal.css">
 		<title>Sistema de Torneio de Xadrez</title>
 	</head>
 
@@ -23,19 +23,19 @@
 							<table class="menu">
 								<tr>
 									<td>
-										<a href="index.ejs">Home</a>
+										<a href="/index">Home</a>
 									</td>
 									<td>
-										<a href="registro.ejs">Registro</a>
+										<a href="/registro">Registro</a>
 									</td>
 									<td>
-										<a href="agendamento.ejs">Agendamento</a>
+										<a href="/agendamento">Agendamento</a>
 									</td>
 									<td>
-										<a href="resultados.ejs">Resultados</a>
+										<a href="/resultados">Resultados</a>
 									</td>
 									<td>
-										<a href="classificacao.ejs">Classificação</a>
+										<a href="/classificacao">Classificação</a>
 									</td>
 								</tr>
 							</table>
@@ -50,8 +50,36 @@
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
 			<div class="home">
-				Bem-vindo ao sistema de torneiro de xadrez! <br/>
-				Você pode fazer registros de jogadores, agendamento de partidas, entrada de resultados, acessar informações dos jogadores e consultar a classificação do torneiro.
+				<form id="formulario" name="resultados" onsubmit="return resultados()">
+					<fieldset>
+						<legend>Resultados</legend>
+						<table>
+							<tr>
+								<th>Partida:</th>
+								<td><select name="partida" class="campos">
+									<option value="null" selected></option>
+									<option value="AL">Alagoas</option>
+									<option value="AM">Amazonas</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>Resultado:</th>
+								<td colspan="3">
+									<input type="radio" name="resultado" value="e" id="e">Empate
+									<input type="radio" name="resultado" value="j1" id="j1"> Venceu Jogador 1
+									<input type="radio" name="resultado" value="j2" id="j2"> Venceu Jogador 2
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+					<br/>
+
+					<!-- Botões Enviar e Limpar -->
+					<input type="submit" value="Enviar dados">
+					<input type="reset" value="Limpar dados">
+
+				</form>
 			</div>
 			<!-- Fim do conteúdo -->
 		</div>
@@ -61,7 +89,8 @@
 			<div id="creditos">
 				<img src="img/ufjf.png" alt="Logo da UFJF" height="50px"/> <br/>
 				Carlos Alexandre<br/>
-				Laboratório de Programação VI
+				Laboratório de Programação VI 2016.3<br/>
+				Universidade Federal de Juiz de Fora
 			</div>
 
 		</div>

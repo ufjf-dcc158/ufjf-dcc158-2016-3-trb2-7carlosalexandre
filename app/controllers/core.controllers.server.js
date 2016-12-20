@@ -1,54 +1,28 @@
-var detalhes = {
-  versao: 1.0,
-  contato: "fulano@gmail.com"
-};
-var professor = {
-  nome: "Zicrano",
-  siape: 12345
-}
-var turma = {
-  codigo: "dcc158",
-  alunos: [
-    {matricula:"20161233", nome:"Fulano"},
-    {matricula:"20161234", nome:"Beltrano"},
-    {matricula:"20161236", nome:"Ciclano"}
-  ]
-}
+var Jogador = require('mongoose').model('Jogador');
+var Partida = require('mongoose').model('Partida');
 
 module.exports.home = function (req, res, next) {
-  res.render('index',{
-    titulo: "Olá mundo MVC!"
-  });
+  res.render('index');
 }
 
 module.exports.registro = function (req, res, next) {
-  res.render('registro',{
-    titulo: "Olá mund"
-  });
+  res.render('registro');
 }
 
 module.exports.agendamento = function (req, res, next) {
-  res.render('agendamento',{
-    titulo: "Olá mund"
-  });
+  res.render('agendamento');
 }
 
 module.exports.resultados = function (req, res, next) {
-  res.render('resultados',{
-    titulo: "Olá mund"
-  });
+  res.render('resultados', {j: jogador, p:partida});
 }
 
 module.exports.classificacao = function (req, res, next) {
-  res.render('classificacao',{
-    titulo: "Olá mund"
-  });;
+  res.render('classificacao');
 }
 
 module.exports.contato = function (req, res, next) {
-  res.render("index",{
-    titulo: "Olá mund"
-  });
+  res.render("contato");
 }
 
 module.exports.contatoHTML = function (req, res, next) {

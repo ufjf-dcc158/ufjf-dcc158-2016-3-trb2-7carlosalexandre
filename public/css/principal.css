@@ -1,7 +1,7 @@
 body{
 	background-image: url("../Imagens/Elementos/background.gif"); 
 	background-color: #00868B; 
-	font-family: Sneak, Georgia;
+	font-family: Georgia;
 	text-align: justify;
 	font-size: 14px;
 }
@@ -13,7 +13,6 @@ p{
 }
 
 ul{
-	list-style-image: url(../images/marcador.gif);
 	list-style-position: inside;
 }
 
@@ -45,15 +44,18 @@ table, th, td{
 
 /* Background dos creditos*/
 .fundo_creditos{
+	position: absolute;	
 	background-color: rgba(64, 64, 64, 0.4);
 	margin-left: -8px;
 	margin-right: -8px;
-	margin-bottom: -8px;
+	bottom: 0;
+	width:100%;
 }
 
 /* Tabela do cabeçalho */
 .titulo{
 	text-align: center;
+	font-family: Sneak, Georgia;
 	vertical-align: middle;
 	margin-left: auto; 
 	margin-right: auto;
@@ -67,6 +69,7 @@ table, th, td{
 /* Data */
 .data{
 	text-align: right;
+	font-family: Sneak, Georgia;
 	padding-right: 8px; 
 	font-size: 10px;
 	color: white;
@@ -84,11 +87,14 @@ table, th, td{
 	padding: 10px;
 	font-size: 10px;
 	text-align: center;
+	bottom: 0;
+	font-family: Sneak, Georgia;
 	color: white;
 }
 
 /*  Menu principal */
 .menu td{
+	font-family: Sneak, Georgia;
 	margin-left: auto; 
 	margin-right: auto;
 	font-size: 14px;
@@ -136,3 +142,21 @@ a:active{
 	text-decoration: underline;
 	color: white;
 }
+
+/* Formulário */
+
+#formulario th, td, table{
+	text-align: left;
+	vertical-align: middle;
+	font-weight: normal;
+	border-style: none;
+}
+
+#formulario legend{
+	font-size: 25px;
+}
+
+.campos{
+	font-size: 16px;
+}
+
