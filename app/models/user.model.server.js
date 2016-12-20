@@ -12,8 +12,8 @@ var JogadorSchema = new Schema({
 
 var PartidaSchema = new Schema({
   nome: { type: String, required: true},
-  jogadorUm: { type: String, required: true},
-  jogadorDois: { type: String, required: true},
+  jogadorUm: {type: Schema.ObjectId, ref: 'Jogador'},
+  jogadorDois: {type: Schema.ObjectId, ref: 'Jogador'},
   empate: { type: Number, default: false},
   ganhador: { type: String, default: null},
   perdedor: { type: String, default: null},

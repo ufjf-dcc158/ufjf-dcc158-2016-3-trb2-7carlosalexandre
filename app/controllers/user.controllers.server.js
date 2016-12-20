@@ -1,18 +1,30 @@
 var Jogador = require('mongoose').model('Jogador');
 var Partida = require('mongoose').model('Partida');
 
-module.exports.create = function(req, res,
+module.exports.createJogador = function(req, res,
  next){
-   var user = new User(req.body);
-   user.save(function (err) {
+   var jogador = new Jogador(req.body);
+   jogador.save(function (err) {
      if(err){
        next(err);
      }else{
-       res.json(user);
+       res.redirect("/user/"+jogador._id);
      }
    });
 }
 
+
+module.exports.createPartida = function(req, res,
+ next){
+   var partida = new Partida(req.body);
+   partida.save(function (err) {
+     if(err){
+       next(err);
+     }else{
+       res.redirect("/partida/"+partida._id);
+     }
+   });
+}
 
 module.exports.listaJogadores = function(req, res, next){
   Jogador.find({}, function(err, jogadores) {
@@ -23,44 +35,60 @@ module.exports.listaJogadores = function(req, res, next){
     }
   });
 }
+
 module.exports.getById = function(req, res, next, id){
-  User.findOne({"_id":id}, function(err, user){
+  Jogador.findOne({"_id":id}, function(err, jogador){
     if(err){
       res.json({});
     }else{
-      req.user = user;
+      req.jogador = jogador;
       next();
     }
   });
 }
 
-module.exports.read = function(req, res, next){
-  res.json(req.user);
+module.exports.getByIdPartida = function(req, res, next, id){
+  Partida.findOne({"_id":id}, function(err, partida){
+    if(err){
+      res.json({});
+    }else{
+      req.partida = partida;
+      next();
+    }
+  });
+}
+
+module.exports.readJogador = function(req, res, next){
+  res.json(req.jogador);
+}
+
+module.exports.readPartida = function(req, res, next){
+  res.json(req.partida);
 }
 
 module.exports.update = function(req, res, next){
-  User.findByIdAndUpdate(
-    req.user.id,
+  Jogador.findByIdAndUpdate(
+    req.jogador.id,
     req.body,
-    function(err, user2){
+    function(err, jogador2){
       if(err){
         next(err);
       }else{
-        res.json(user2);
+        res.json(jogador2);
       }
     }
   );
 }
 
 module.exports.remove = function(req, res, next){
-  User.findByIdAndRemove(
-    req.user.id,
+  Jogador.findByIdAndRemove(
+    req.jogador.id,
     req.body,
-    function(err, user2){
+    function(err, jogador2){
       if(err){
         next(err);
       }else{
-        res.json(user2);
+        res.json(jogador2);
       }
     }
   );

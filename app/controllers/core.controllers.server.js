@@ -14,7 +14,7 @@ module.exports.agendamento = function (req, res, next) {
 }
 
 module.exports.resultados = function (req, res, next) {
-  res.render('resultados', {j: jogador, p:partida});
+  res.render('resultados');
 }
 
 module.exports.classificacao = function (req, res, next) {

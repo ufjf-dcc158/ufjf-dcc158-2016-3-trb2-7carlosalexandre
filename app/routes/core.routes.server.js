@@ -9,6 +9,5 @@ module.exports = function(app){
   app.use("/turma.html", core.turma);
   app.route("/agendamento")
     .get(core.agendamento)
-    .post()
   app.use("/", core.home);
 }

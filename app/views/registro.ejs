@@ -50,13 +50,15 @@
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
 			<div class="home">
-				<form id="formulario" name="registro">
+				<form id="formulario" name="registro" action="/user" method="post">
 					<fieldset>
 						<legend>Registro</legend>
 						<table>
 							<tr>
 								<th>Nome do jogador:</th>
 								<td><input type="text" name="nome" size="30" class="campos" required></td>
+							</tr>
+							<tr>
 								<th>Cidade do jogador:</th>
 								<td><input type="text" name="cidade" size="30" class="campos" required></td>
 							</tr>

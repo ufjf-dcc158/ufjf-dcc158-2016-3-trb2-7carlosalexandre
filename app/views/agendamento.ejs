@@ -50,13 +50,15 @@
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
 			<div class="home">
-				<form id="formulario" name="agendamento">
+				<form id="formulario" name="agendamento" action="/partida" method="post">
 					<fieldset>
 						<legend>Agendamento</legend>
 						<table>
 							<tr>
 								<th>Nome da partida:</th>
 								<td><input type="text" name="nome" size="30" class="campos" required></td>
+							</tr>
+							<tr>
 								<th>Jogador 1:</th>
 								<td><select name="j1" class="campos" required>
 									<option value="" selected></option>
@@ -64,6 +66,8 @@
 									<option value="AM">Amazonas</option>
 									</select>
 								</td>
+							</tr>
+							<tr>
 								<th>Jogador 2:</th>
 								<td><select name="j2" class="campos" required>
 									<option value="" selected></option>
