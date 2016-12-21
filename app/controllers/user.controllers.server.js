@@ -17,11 +17,19 @@ module.exports.createJogador = function(req, res,
 module.exports.createPartida = function(req, res,
  next){
    var partida = new Partida(req.body);
-   partida.save(function (err) {
+   Jogador.findOne({_id:req.body.j1}, function(err, j1) {
      if(err){
        next(err);
-     }else{
-       res.redirect("/partida/"+partida._id);
+     } else {
+       partida.j1 = j1;
+       partida.j2 = j2;
+       partida.save(function (err) {
+         if(err){
+           next(err);
+         }else{
+           res.redirect("/partida/"+partida._id);
+         }
+       });
      }
    });
 }

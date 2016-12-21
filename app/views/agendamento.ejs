@@ -62,8 +62,9 @@
 								<th>Jogador 1:</th>
 								<td><select name="j1" class="campos" required>
 									<option value="" selected></option>
-									<option value="AL">Alagoas</option>
-									<option value="AM">Amazonas</option>
+									<% for(var i = 0; i<jogadores.length; i++){%>
+									<option value="<%=jogadores[i]._id%>"><%=jogadores[i].nome%></option>
+									<%}%>
 									</select>
 								</td>
 							</tr>
@@ -71,9 +72,10 @@
 								<th>Jogador 2:</th>
 								<td><select name="j2" class="campos" required>
 									<option value="" selected></option>
-									<option value="AL">Alagoas</option>
-									<option value="AM">Amazonas</option>
-									</select>
+									<% for(var i = 0; i<jogadores.length; i++){%>
+									<option value="<%=jogadores[i]._id%>"><%=jogadores[i].nome%></option>
+									<%}%>
+								</select>
 								</td>
 							</tr>
 						</table>

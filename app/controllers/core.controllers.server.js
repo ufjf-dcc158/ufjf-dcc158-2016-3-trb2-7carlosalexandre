@@ -10,7 +10,14 @@ module.exports.registro = function (req, res, next) {
 }
 
 module.exports.agendamento = function (req, res, next) {
-  res.render('agendamento');
+  Jogador.find({}, function(err, jogadores) {
+    if(err){
+      next(err);
+    } else {
+      res.render('agendamento', {"jogadores":jogadores});
+    }
+  });
+
 }
 
 module.exports.resultados = function (req, res, next) {

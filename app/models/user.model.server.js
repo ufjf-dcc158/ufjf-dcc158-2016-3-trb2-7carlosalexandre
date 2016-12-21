@@ -15,8 +15,8 @@ var PartidaSchema = new Schema({
   jogadorUm: {type: Schema.ObjectId, ref: 'Jogador'},
   jogadorDois: {type: Schema.ObjectId, ref: 'Jogador'},
   empate: { type: Number, default: false},
-  ganhador: { type: String, default: null},
-  perdedor: { type: String, default: null},
+  ganhador: {type: Schema.ObjectId, ref: 'Jogador'},
+  perdedor: {type: Schema.ObjectId, ref: 'Jogador'}
 });
 
 mongoose.model('Jogador', JogadorSchema);
