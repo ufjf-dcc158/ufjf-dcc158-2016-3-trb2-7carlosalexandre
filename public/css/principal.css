@@ -1,3 +1,14 @@
+/* Fonte arquivada */
+@font-face{
+	font-family: Sneak;
+    	src: url(../fonts/Sneak-Attack.ttf);
+}
+
+/* Tabelas gerais do site*/
+table, th, td{
+	vertical-align: middle;
+}
+
 /* Textos gerais do site*/
 body{
 	background-image: url("../img/background.png");
@@ -8,60 +19,36 @@ body{
 	font-size: 17px;
 }
 
-/* Tabelas gerais do site*/
-table, th, td{
-	vertical-align: middle;
+/* Texto da home. */
+.boas_vindas{
+	font-size: 28px;
+	text-align: center;
 }
 
-/* Fonte arquivada */
-@font-face{
-	font-family: Sneak;
-    	src: url(../fonts/Sneak-Attack.ttf);
+/* Texto de aviso. */
+.aviso{
+	text-align: center;
 }
 
 /* Background do conteúdo da página */
-.fundo_da_pagina {
+.fundo_da_pagina{
 	background-color: rgba(255, 255, 255, 0.9);
 	margin: 20px;
 	padding: 8px;
 	position: relative;
 }
 
-/* Background do cabeçalho */
-.fundo_menu{
-	background-color: rgba(0, 0, 0, 0.85);
-	margin-left: -8px;
-	margin-right: -8px;
-	margin-top: -8px;
-}
 
-/* Background dos creditos*/
-.fundo_creditos{
-	position: absolute;
-	background-color: rgba(3, 18, 82, 0.75);
-	margin-left: -8px;
-	margin-right: -8px;
-	bottom: 0;
-	width:100%;
-}
-
-/* Tabela do cabeçalho */
+/* Título do site. */
 .titulo{
-	text-align: center;
-	font-family: Sneak, Georgia;
-	vertical-align: middle;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Título do cabeçalho */
-.titulo h1{
 	color: white;
+	padding-left: 7px;
+	padding-right: 12px;
 	font-size: 24px;
 	text-align: center;
 }
 
-/* Data */
+/* Data. */
 .data{
 	text-align: right;
 	font-family: Sneak, Georgia;
@@ -70,30 +57,18 @@ table, th, td{
 	color: white;
 }
 
-/* Texto da home */
-.boas_vindas{
-	font-size: 28px;
-	text-align: center;
-}
-
-/* Créditos da página */
-#creditos{
-	padding: 10px;
-	font-size: 10px;
-	text-align: center;
-	bottom: 0;
-	font-family: Sneak, Georgia;
-	color: white;
-}
-
-/*  Menu principal */
-.menu td{
+/*  Menu do cabeçalho. */
+.menu{
 	font-family: Sneak, Georgia;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
+}
+
+.menu td{
+	padding-left: 7px;
+	padding-right: 7px;
 	font-size: 14px;
-	padding-left: 20px;
-	padding-right: 20px;
 }
 
 .menu a:link{
@@ -116,7 +91,35 @@ table, th, td{
 	color: white;
 }
 
-/* Formulário */
+/* Background do cabeçalho. */
+.fundo_menu{
+	background-color: rgba(0, 0, 0, 0.85);
+	margin-left: -8px;
+	margin-right: -8px;
+	margin-top: -8px;
+}
+
+/* Rodapé da página. */
+#rodape{
+	padding: 10px;
+	font-size: 10px;
+	text-align: center;
+	bottom: 0;
+	font-family: Sneak, Georgia;
+	color: white;
+}
+
+/* Background do rodapé. */
+.fundo_rodape{
+	position: absolute;
+	background-color: rgba(3, 18, 82, 0.75);
+	margin-left: -8px;
+	margin-right: -8px;
+	bottom: 0;
+	width:100%;
+}
+
+/* Formulários do site. */
 #formulario th, td, table{
 	text-align: left;
 	vertical-align: middle;
@@ -130,7 +133,7 @@ table, th, td{
 	font-size: 25px;
 }
 
-/* Botões de enviar e limpar dados */
+/* Botões de enviar e limpar dados. */
 .botoes{
 	text-align: center;
 }
