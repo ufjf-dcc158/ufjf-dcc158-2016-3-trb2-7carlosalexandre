@@ -1,21 +1,14 @@
+/* Textos gerais do site*/
 body{
-	background-image: url("../Imagens/Elementos/background.gif");
+	background-image: url("../img/background.png");
+    	background-repeat: repeat;
 	background-color: #00868B;
 	font-family: Georgia;
 	text-align: justify;
-	font-size: 14px;
+	font-size: 17px;
 }
 
-p{
-	text-indent: 27px;
-	line-height: 110%;
-	margin: 0;
-}
-
-ul{
-	list-style-position: inside;
-}
-
+/* Tabelas gerais do site*/
 table, th, td{
 	vertical-align: middle;
 }
@@ -23,12 +16,12 @@ table, th, td{
 /* Fonte arquivada */
 @font-face{
 	font-family: Sneak;
-    src: url(../fonts/Sneak-Attack.ttf);
+    	src: url(../fonts/Sneak-Attack.ttf);
 }
 
 /* Background do conteúdo da página */
 .fundo_da_pagina {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.9);
 	margin: 20px;
 	padding: 8px;
 	position: relative;
@@ -36,7 +29,7 @@ table, th, td{
 
 /* Background do cabeçalho */
 .fundo_menu{
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.85);
 	margin-left: -8px;
 	margin-right: -8px;
 	margin-top: -8px;
@@ -45,7 +38,7 @@ table, th, td{
 /* Background dos creditos*/
 .fundo_creditos{
 	position: absolute;
-	background-color: rgba(64, 64, 64, 0.4);
+	background-color: rgba(3, 18, 82, 0.75);
 	margin-left: -8px;
 	margin-right: -8px;
 	bottom: 0;
@@ -64,6 +57,8 @@ table, th, td{
 /* Título do cabeçalho */
 .titulo h1{
 	color: white;
+	font-size: 24px;
+	text-align: center;
 }
 
 /* Data */
@@ -76,11 +71,10 @@ table, th, td{
 }
 
 /* Texto da home */
-.home{
-	font-size: 17px;
+.boas_vindas{
+	font-size: 28px;
 	text-align: center;
 }
-
 
 /* Créditos da página */
 #creditos{
@@ -122,34 +116,13 @@ table, th, td{
 	color: white;
 }
 
-/* Links Gerais */
-a:link{
-	text-decoration: none;
-	color: #8B2500;
-}
-
-a:visited{
-	text-decoration: none;
-	color: #CD3700;
-}
-
-a:hover{
-	text-decoration: none;
-	color: white;
-}
-
-a:active{
-	text-decoration: underline;
-	color: white;
-}
-
 /* Formulário */
-
 #formulario th, td, table{
 	text-align: left;
 	vertical-align: middle;
 	font-weight: normal;
 	border-style: none;
+	font-size: 17px;
 }
 
 #formulario legend{
@@ -157,6 +130,7 @@ a:active{
 	font-size: 25px;
 }
 
-.campos{
-	font-size: 16px;
+/* Botões de enviar e limpar dados */
+.botoes{
+	text-align: center;
 }
