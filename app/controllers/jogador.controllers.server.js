@@ -1,5 +1,4 @@
 var Jogador = require('mongoose').model('Jogador');
-var Partida = require('mongoose').model('Partida');
 
 module.exports.createJogador = function(req, res,
  next){
@@ -8,28 +7,7 @@ module.exports.createJogador = function(req, res,
      if(err){
        next(err);
      }else{
-       res.redirect("/user/"+jogador._id);
-     }
-   });
-}
-
-
-module.exports.createPartida = function(req, res,
- next){
-   var partida = new Partida(req.body);
-   Jogador.findOne({_id:req.body.j1}, function(err, j1) {
-     if(err){
-       next(err);
-     } else {
-       partida.j1 = j1;
-       partida.j2 = j2;
-       partida.save(function (err) {
-         if(err){
-           next(err);
-         }else{
-           res.redirect("/partida/"+partida._id);
-         }
-       });
+       res.redirect("/jogador/"+jogador._id);
      }
    });
 }
@@ -55,23 +33,8 @@ module.exports.getById = function(req, res, next, id){
   });
 }
 
-module.exports.getByIdPartida = function(req, res, next, id){
-  Partida.findOne({"_id":id}, function(err, partida){
-    if(err){
-      res.json({});
-    }else{
-      req.partida = partida;
-      next();
-    }
-  });
-}
-
 module.exports.readJogador = function(req, res, next){
   res.json(req.jogador);
-}
-
-module.exports.readPartida = function(req, res, next){
-  res.json(req.partida);
 }
 
 module.exports.update = function(req, res, next){

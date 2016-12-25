@@ -19,7 +19,8 @@ module.exports = function(){
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
     app.use(express.static('./public'));
-    require('../app/routes/user.routes.server.js')(app);
-    require('../app/routes/core.routes.server.js')(app);
+    require('../app/routes/jogador.routes.server.js')(app);
+    require('../app/routes/partida.routes.server.js')(app);
+    require('../app/routes/principal.routes.server.js')(app);
   return app;
 }

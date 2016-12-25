@@ -10,14 +10,4 @@ var JogadorSchema = new Schema({
   classificacao: { type: Number, default: 0}
 });
 
-var PartidaSchema = new Schema({
-  nome: { type: String, required: true},
-  jogadorUm: {type: Schema.ObjectId, ref: 'Jogador'},
-  jogadorDois: {type: Schema.ObjectId, ref: 'Jogador'},
-  empate: { type: Number, default: false},
-  ganhador: {type: Schema.ObjectId, ref: 'Jogador'},
-  perdedor: {type: Schema.ObjectId, ref: 'Jogador'}
-});
-
 mongoose.model('Jogador', JogadorSchema);
-mongoose.model('Partida', PartidaSchema);

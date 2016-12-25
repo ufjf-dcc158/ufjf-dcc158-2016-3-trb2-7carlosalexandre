@@ -31,11 +31,3 @@ module.exports.classificacao = function (req, res, next) {
 module.exports.contato = function (req, res, next) {
   res.render("contato");
 }
-
-module.exports.contatoHTML = function (req, res, next) {
-  res.render('contato', detalhes);
-}
-
-module.exports.turma = function (req, res, next) {
-  res.render('turma', {prof: professor, t:turma});
-}
