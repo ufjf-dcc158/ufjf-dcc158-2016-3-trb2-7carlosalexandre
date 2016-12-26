@@ -50,8 +50,9 @@
 								<th>Partida:</th>
 								<td><select name="partida" class="campos" required>
 									<option value="" selected></option>
-									<option value="AL">Alagoas</option>
-									<option value="AM">Amazonas</option>
+									<% for(var i = 0; i<partidas.length; i++){%>
+									<option value="<%=partidas[i]._id%>"><%=partidas[i].nome%></option>
+									<%}%>
 									</select>
 								</td>
 							</tr>
@@ -75,7 +76,6 @@
 
 				</form>
 			<!-- Fim do conteúdo -->
-		</div>
 
 		<!--Créditos -->
 		<div class="fundo_rodape">
@@ -86,6 +86,7 @@
 				Universidade Federal de Juiz de Fora
 			</div>
 
+		</div>
 		</div>
 
 	</body>

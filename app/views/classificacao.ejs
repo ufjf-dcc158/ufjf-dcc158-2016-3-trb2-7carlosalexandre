@@ -42,11 +42,40 @@
 			</div>
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
-			<div class="home">
-			agendamento67
-			</div>
+			<form id="formulario" name="classificacao">
+				<fieldset>
+					<legend>Classificação</legend>
+					<table class="classificacao">
+					  <tr>
+					    <th>#</th>
+					    <th>Nome do Jogador(a):</th>
+					    <th>Cidade do Jogador(a):</th>
+					    <th>ELO Rating:</th>
+					    <th>Vitórias:</th>
+					    <th>Derrotas:</th>
+					    <th>Empates:</th>
+					  </tr>
+						<% for(var i = 0; i<jogadores.length; i++){%>
+							<tr>
+						    <td><%=i+1%></td>
+						    <td><%=jogadores[i].nome%></td>
+								<td><%=jogadores[i].cidade%></td>
+								<td><%=jogadores[i].ELO%></td>
+								<td><%=jogadores[i].vitorias%></td>
+								<td><%=jogadores[i].derrotas%></td>
+								<td><%=jogadores[i].empates%></td>
+						  </tr>
+						<%}%>
+				</table>
+				</fieldset>
+				<br/>
+				<!-- Botão Voltar -->
+				<div class="botoes">
+					<input type="button" value="Voltar" onClick="history.go(-1)">
+				</div>
+			</form>
 			<!-- Fim do conteúdo -->
-		</div>
+
 
 		<!--Créditos -->
 		<div class="fundo_rodape">
@@ -57,6 +86,7 @@
 				Universidade Federal de Juiz de Fora
 			</div>
 
+		</div>
 		</div>
 
 	</body>
