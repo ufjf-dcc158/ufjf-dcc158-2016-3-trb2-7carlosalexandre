@@ -42,7 +42,7 @@
 			</div>
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
-				<form id="formulario" name="resultados">
+				<form id="formulario" name="resultados" action="/resultadoPartida" method="post">
 					<fieldset>
 						<legend>Resultados</legend>
 						<table>
@@ -59,9 +59,9 @@
 							<tr>
 								<th>Resultado:</th>
 								<td colspan="3">
-									<input type="radio" name="resultado" value="e" id="e" required>Empate
-									<input type="radio" name="resultado" value="j1" id="j1"> Venceu Jogador(a) 1
-									<input type="radio" name="resultado" value="j2" id="j2"> Venceu Jogador(a) 2
+									<input type="radio" name="resultado" value="empate" id="e" required>Empate
+									<input type="radio" name="resultado" value="venceuj1" id="j1"> Venceu Jogador(a) 1
+									<input type="radio" name="resultado" value="venceuj2" id="j2"> Venceu Jogador(a) 2
 								</td>
 							</tr>
 						</table>

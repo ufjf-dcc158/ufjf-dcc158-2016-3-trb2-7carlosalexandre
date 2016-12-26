@@ -1,7 +1,7 @@
 module.exports = function(app){
   var jogador = require("../controllers/jogador.controllers.server.js");
   app.route("/jogador")
-    .post(jogador.createJogador)
+    .post(jogador.criarJogador)
     .get(jogador.listaJogadores);
   app.route("/jogador/:jogadorId")
     .get(jogador.confirmacaoJogador)

@@ -1,6 +1,6 @@
 var Jogador = require('mongoose').model('Jogador');
 
-module.exports.createJogador = function(req, res, next){
+module.exports.criarJogador = function(req, res, next){
   Jogador.findOne({"nome":req.body.nome}, function(err, jogador) {
     if(jogador != null){
       var aviso = "Já existe um(a) jogador(a) com esse nome. Tente novamente.";
