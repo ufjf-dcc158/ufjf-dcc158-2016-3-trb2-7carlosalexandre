@@ -3,9 +3,9 @@ var Schema = mongoose.Schema;
 
 var PartidaSchema = new Schema({
   nome: { type: String, required: true},
-  jogadorUm: {type: Schema.ObjectId, ref: 'Jogador'},
-  jogadorDois: {type: Schema.ObjectId, ref: 'Jogador'},
-  empate: { type: Number, default: false},
+  j1: {type: Schema.ObjectId, ref: 'Jogador'},
+  j2: {type: Schema.ObjectId, ref: 'Jogador'},
+  empate: { type: Boolean, default: false},
   ganhador: {type: Schema.ObjectId, ref: 'Jogador'},
   perdedor: {type: Schema.ObjectId, ref: 'Jogador'}
 });

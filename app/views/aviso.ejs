@@ -42,15 +42,19 @@
 			</div>
 			<!-- Fim do cabeçalho da página -->
 			<!-- Conteúdo da página -->
-				<div class="boas_vindas">
-					Bem-vindo ao sistema de torneio de xadrez!
+			<form id="formulario" name="aviso">
+				<fieldset>
+					<legend>Aviso</legend>
+					<div class="aviso">
+						<%=aviso%>
+					</div>
+				</fieldset>
+				<br/>
+				<!-- Botão voltar-->
+				<div class="botoes">
+					<input type="button" value="Voltar" onClick="history.go(-1)">
 				</div>
-				Aqui você pode:
-				<ul>
-					<li>Cadastrar jogadores;</li>
-					<li>Registrar novas partidas e seus resultados;</li>
-					<li>Ver a classificação do torneio.</li>
-				</ul>
+			</form>
 			<!-- Fim do conteúdo -->
 		</div>
 

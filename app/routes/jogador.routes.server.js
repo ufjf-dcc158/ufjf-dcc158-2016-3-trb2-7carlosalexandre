@@ -4,8 +4,8 @@ module.exports = function(app){
     .post(jogador.createJogador)
     .get(jogador.listaJogadores);
   app.route("/jogador/:jogadorId")
-    .get(jogador.readJogador)
+    .get(jogador.confirmacaoJogador)
     .put(jogador.update)
     .delete(jogador.remove);
-  app.param("jogadorId", jogador.getById);
+  app.param("jogadorId", jogador.getByIdJogador);
 }

@@ -3,6 +3,6 @@ module.exports = function(app){
   app.route("/partida")
       .post(partida.createPartida);
   app.route("/partida/:partidaId")
-    .get(partida.readPartida);
+    .get(partida.confirmacaoPartida);
   app.param("partidaId", partida.getByIdPartida);
 }
