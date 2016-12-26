@@ -45,29 +45,33 @@
 			<form id="formulario" name="classificacao">
 				<fieldset>
 					<legend>Classificação</legend>
-					<table class="classificacao">
-					  <tr>
-					    <th>#</th>
-					    <th>Nome do Jogador(a):</th>
-					    <th>Cidade do Jogador(a):</th>
-					    <th>ELO Rating:</th>
-					    <th>Vitórias:</th>
-					    <th>Derrotas:</th>
-					    <th>Empates:</th>
-					  </tr>
-						<% for(var i = 0; i<jogadores.length; i++){%>
-							<tr>
-						    <td><%=i+1%></td>
-						    <td><%=jogadores[i].nome%></td>
-								<td><%=jogadores[i].cidade%></td>
-								<td><%=jogadores[i].ELO%></td>
-								<td><%=jogadores[i].vitorias%></td>
-								<td><%=jogadores[i].derrotas%></td>
-								<td><%=jogadores[i].empates%></td>
-						  </tr>
+						<% if(jogadores.length > 0){%>
+							<table class="classificacao">
+							  <tr>
+							    <th>#</th>
+							    <th>Nome do Jogador(a):</th>
+							    <th>Cidade do Jogador(a):</th>
+							    <th>ELO Rating:</th>
+							    <th>Vitórias:</th>
+							    <th>Derrotas:</th>
+							    <th>Empates:</th>
+							  </tr>
+								<% for(var i = 0; i<jogadores.length; i++){%>
+									<tr>
+								    <td><%=i+1%></td>
+								    <td><%=jogadores[i].nome%></td>
+										<td><%=jogadores[i].cidade%></td>
+										<td><%=jogadores[i].ELO%></td>
+										<td><%=jogadores[i].vitorias%></td>
+										<td><%=jogadores[i].derrotas%></td>
+										<td><%=jogadores[i].empates%></td>
+								  </tr>
+								<%}%>
+							</table>
+						<%} else { %>
+							Não há jogadores no torneio.
 						<%}%>
-				</table>
-				</fieldset>
+					</fieldset>
 				<br/>
 				<!-- Botão Voltar -->
 				<div class="botoes">

@@ -30,7 +30,7 @@ module.exports.resultados = function (req, res, next) {
 }
 
 module.exports.classificacao = function (req, res, next) {
-  Jogador.find({}, function(err, jogadores) {
+  Jogador.find({}).sort({"ELO": -1}).exec(function(err, jogadores) {
     if(err){
       next(err);
     } else {
