@@ -132,35 +132,16 @@ body{
 }
 
 /* Tabela de classificação do torneio de xadrez. */
-.classificacao{
-	border-collapse: collapse;
-	border-spacing: 0;
-	border-color: #999;
-	margin: 0px auto;
-	vertical-align: middle;
-}
+
+
 
 /* Títulos da tabela de classificação do torneio de xadrez. */
-.classificacao th{
-	padding: 10px 5px;
-	border-style: solid;
-	border-width: 1px;
-	overflow: hidden;
-	word-break: normal;
-	border-color: #999;
-	color: #fff;
-	background-color: #26ADE4;
-}
+
+
 
 /* Dados da tabela de classificação do torneio de xadrez. */
-.classificacao td{
-	text-align: center;
-	padding: 2px 2px;
-	border-style: solid;
-	border-width: 1px;
-	overflow: hidden;
-	word-break: normal;
-	border-color: #999;
-	color: #444;
-	background-color: #F7FDFA;
-}
+
+
+.classificacao{border-collapse:collapse;border-spacing:0;border-color:#999;margin: 0 auto;}
+.classificacao td{text-align-last: center;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+.classificacao .titulo_tabela{text-align-last: center;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}

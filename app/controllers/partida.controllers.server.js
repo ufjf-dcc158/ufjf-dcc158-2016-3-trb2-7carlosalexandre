@@ -82,7 +82,7 @@ module.exports.resultadoPartida = function(req, res, next){
              if(err){
                next(err);
              } else {
-              // if(!partida.finalizada){
+               if(!partida.finalizada){
                 var jogador1 = j01;
                 var jogador2 = j02;
                 var Q1 = Math.pow(10, (jogador1.ELO/400));
@@ -149,10 +149,10 @@ module.exports.resultadoPartida = function(req, res, next){
                       });
                     }
                 });
-              // }else{
-              //   // var aviso = "A partida já foi finalizada. Tente novamente.";
-              //   // res.render('aviso', {"aviso":aviso});
-              // }
+               }else{
+                  var aviso = "A partida já foi finalizada.";
+                  res.render('aviso', {"aviso":aviso});
+               }
              }
            });
         }

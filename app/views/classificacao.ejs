@@ -48,13 +48,13 @@
 						<% if(jogadores.length > 0){%>
 							<table class="classificacao">
 							  <tr>
-							    <th>#</th>
-							    <th>Nome do Jogador(a):</th>
-							    <th>Cidade do Jogador(a):</th>
-							    <th>ELO Rating:</th>
-							    <th>Vitórias:</th>
-							    <th>Derrotas:</th>
-							    <th>Empates:</th>
+							    <th class="titulo_tabela">#</th>
+							    <th class="titulo_tabela">Nome do Jogador(a):</th>
+							    <th class="titulo_tabela">Cidade do Jogador(a):</th>
+							    <th class="titulo_tabela">ELO Rating:</th>
+							    <th class="titulo_tabela">Vitórias:</th>
+							    <th class="titulo_tabela">Derrotas:</th>
+							    <th class="titulo_tabela">Empates:</th>
 							  </tr>
 								<% for(var i = 0; i<jogadores.length; i++){%>
 									<tr>
@@ -69,7 +69,9 @@
 								<%}%>
 							</table>
 						<%} else { %>
-							Não há jogadores no torneio.
+							<div class="aviso">
+								Não há jogadores no torneio.
+							</div>
 						<%}%>
 					</fieldset>
 				<br/>

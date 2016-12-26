@@ -20,7 +20,7 @@ module.exports.agendamento = function (req, res, next) {
 }
 
 module.exports.resultados = function (req, res, next) {
-  Partida.find({}, function(err, partidas) {
+  Partida.find({"finalizada":false}, function(err, partidas) {
     if(err){
       next(err);
     } else {

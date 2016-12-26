@@ -45,35 +45,47 @@
 				<form id="formulario" name="resultados" action="/resultadoPartida" method="post">
 					<fieldset>
 						<legend>Resultados</legend>
-						<table>
-							<tr>
-								<th>Partida:</th>
-								<td><select name="partida" class="campos" required>
-									<option value="" selected></option>
-									<% for(var i = 0; i<partidas.length; i++){%>
-									<option value="<%=partidas[i]._id%>"><%=partidas[i].nome%></option>
-									<%}%>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<th>Resultado:</th>
-								<td colspan="3">
-									<input type="radio" name="resultado" value="empate" id="empate" required>Empate
-									<input type="radio" name="resultado" value="venceuj1" id="venceuj1"> Venceu Jogador(a) 1
-									<input type="radio" name="resultado" value="venceuj2" id="venceuj2"> Venceu Jogador(a) 2
-								</td>
-							</tr>
-						</table>
-					</fieldset>
-					<br/>
+						<% if(partidas.length > 0){%>
+							<table>
+								<tr>
+									<th>Partida:</th>
+									<td><select name="partida" class="campos" required>
+										<option value="" selected></option>
+										<% for(var i = 0; i<partidas.length; i++){%>
+										<option value="<%=partidas[i]._id%>"><%=partidas[i].nome%></option>
+										<%}%>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>Resultado:</th>
+									<td colspan="3">
+										<input type="radio" name="resultado" value="empate" id="empate" required>Empate
+										<input type="radio" name="resultado" value="venceuj1" id="venceuj1"> Venceu Jogador(a) 1
+										<input type="radio" name="resultado" value="venceuj2" id="venceuj2"> Venceu Jogador(a) 2
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+						<br/>
 
-					<!-- Botões Enviar e Limpar -->
-					<div class="botoes">
-						<input type="submit" value="Enviar dados">
-						<input type="reset" value="Limpar dados">
-					</div>
+						<!-- Botões Enviar e Limpar -->
+						<div class="botoes">
+							<input type="submit" value="Enviar dados">
+							<input type="reset" value="Limpar dados">
+						</div>
+						<%} else {%>
+							<div class="aviso">
+								Não há partidas ativas no torneio.
+							</div>
+							</fieldset>
+							<br/>
 
+							<!-- Botão Voltar -->
+							<div class="botoes">
+								<input type="button" value="Voltar" onClick="history.go(-1)">
+							</div>
+						<%}%>
 				</form>
 			<!-- Fim do conteúdo -->
 
